@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <% if(searchResults != ''){ %>
+           <% searchResults.forEach(function(note, index) { %>
+               <a href="/dash/note/item/<%= note._id %>">
+                <h4><%= note.title %></h4>
+               </a>
+         <%  }) %>
+        
+        <% } else { %>
+            <p>No items found. </p>
+      <%  } %>
+
+    </div>
+</div>

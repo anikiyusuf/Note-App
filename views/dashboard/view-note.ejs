@@ -1,0 +1,56 @@
+<div>
+    <div>
+        <nav>
+            <ol>
+             <li><a href="/dashboard">Dashboard</a></li>
+             <li><%= note.title %></li>
+            </ol>
+    </nav>
+    <div>
+        <h1>View Note</h1>
+        <button>
+            Delete
+        </button>
+    </div>
+    </div>
+
+
+
+<form action="/dash/note/item/<%= noteID %>?_method=PUT"  method="POST">
+    <div>
+        <input type="text"  id="title" value="<%= note.title %>"  placeholder="Title">
+    </div>
+  
+ <div>
+    <textarea id="body" placeholder="Take a note..."><%= note.body %></textarea>
+ </div>
+
+
+ <div>
+    <button type="submit" >Update</button>
+ </div>
+</form>
+
+</div>
+
+
+<div>
+   <div>
+    <h5> You are about to delete a note</h5>
+    <button type="button">
+        <span>&times;</span>
+    </button>
+   </div> 
+   <div>
+    <p>
+        This will delete you note <b><%= note.title %></b><br/>
+        Are you sure?
+    </p>
+   </div>
+   <div>
+    <button type="button">Close</button>
+   <form acton="/dash/note/delete/<%= noteID %>?_method=DELETE" method="POST" >
+       <button type="submit" >Delete Note</button>
+   </form>
+   </div>
+</div>

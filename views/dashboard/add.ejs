@@ -1,0 +1,26 @@
+<div>
+   
+    <div>
+        <nav>
+            <ol>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li>Add Note</li>
+            </ol>
+        </nav>
+        <div>
+            <h1>Add Note</h1>
+        </div>
+    </div>
+
+    <form action="/dash/note/add" method="POST">
+        <div>
+            <input type="text" id="title" name="title" placeholder="Title" required>
+      </div>
+      <div>
+        <textarea id="body" name="body" placeholder="Take a note..."></textarea>
+      </div>
+      <div>
+        <button type="submit">+ Add Note</button>
+      </div>
+    </form>
+</div>

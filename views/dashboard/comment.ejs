@@ -1,0 +1,27 @@
+
+<!-- 
+  <div class="Notes">
+   
+    <div class="Name">
+      <h1>Hey, <%= displayName %></h1>
+    </div>
+    <div>
+      <a href="/dashboard/add">+ Add New Notes</a>
+    </div>
+
+
+    <div>
+
+    <% if(notes.length > 0 ) { for (var i=0; i < notes.length ; i++) {%>
+      <div class="note">
+         <a href="/dash/item/<%=  notes[i]._id %>">
+          <h5><%= notes[i].title %></h5>
+          <p> <%= notes[i].body %></p>
+         </a>
+      </div>  
+    <% }} else { %>
+     <h2>Ok....</h2>
+     <p>Let's start  with your first</p>
+     <a href="/dashboard/add"> Create One</a>
+      <% } %>
+    </div> -->
